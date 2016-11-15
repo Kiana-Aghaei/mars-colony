@@ -1,3 +1,10 @@
-<h1>
-  {{title}}
-</h1>
+
+  <nav>
+    <a routerLink="/register" routerLinkActive="active">Register</a>
+    <a routerLink="/encounter" routerLinkActive="active">Encounter</a>
+    <a routerLink="/report" routerLinkActive="active">Report</a>
+    <a routerLink="/welcome" routerLinkActive="active">Welcome</a>
+  </nav>
+<div class="app-container">
+  <router-outlet></router-outlet>
+</div>
