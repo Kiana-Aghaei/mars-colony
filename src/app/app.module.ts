@@ -9,7 +9,6 @@ import { EncounterComponent } from './encounter/encounter.component';
 import { ReportComponent } from './report/report.component';
 import { RouterModule, Routes } from '@angular/router';
 import { NotfoundComponent } from './notfound/notfound.component';
-import { ServicesComponent } from './services/services.component';
 
 
 
@@ -31,8 +30,7 @@ const appRoutes: Routes = [
     RegisterComponent,
     EncounterComponent,
     ReportComponent,
-    NotfoundComponent,
-    ServicesComponent
+    NotfoundComponent
   ],
   imports: [
     BrowserModule,

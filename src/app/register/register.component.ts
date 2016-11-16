@@ -20,13 +20,22 @@ export class RegisterComponent implements OnInit {
     jobService.getJobs().subscribe((jobs) => {
       this.marsJobs = jobs;
 
-    }, err => {
+    }, (err) => {
       console.log(err);
     });
    }
 
   ngOnInit() {
-  }
+    setTimeout(() => {
+      console.log('gooz');
+    }, 2000);
+}
+ ngSubmit(event, registerForm){
+  event.proventDefault();
+  registerForm.form.controls.name.invalid = true;
+  console.log(registerForm.controls.age);
+}
+
 
   get jobSelected (){
     return this.colonist.job_id !== this.NO_JOB_SELECTED;
