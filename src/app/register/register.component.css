@@ -1,60 +1,69 @@
-
-.registerPage {
-  background-color: blue;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+.register-page {
+    background: black;
+    height: 100vh;
+    font-family: fantasy;
 }
-.form-field {
-  border: none;
-  border-top: white;
-  border-bottom: white;
-  border-left: white;
-  border-right: white;
 
-}
-p {
-  color: red;
-  size: 2rem;
-
-}
 h1 {
-  color: white;
-  font-size: 2rem;
-
+    padding: 3rem 0;
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    font-weight: lighter;
 }
 
-.heading {
-  text-align: center;
+form {
+    width: 96%;
+    margin: 0 auto;
 }
-.container {
-  margin: 0 auto;
-align-content: center;
-width: 1100px;
-}
-.register-page-form {
-  text-align: left;
-  width: 100%;
-}
-input, select {
-  width: 100%;
-  background-color: yellow;
-  border-top: white;
-  border-left: white;
-  border-right: white;
 
-
+input {
+    width: 99%;
+    background: black;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    padding-left: 8px;
+    line-height: 1.5;
 }
-.button-field {
-  border-color: black;
+
+::-webkit-input-placeholder {
+    color: red;
+    margin-bottom: 2px;
+}
+
+select {
+    background: black;
+    border: none;
+    color: red;
+    width: 100%;
+    font-size: 1rem;
+    border-radius: 0;
+    -webkit-appearance: none;
+    border-bottom: 1px solid white;
+    line-height: 1.5;
+    padding-left: 8px;
+}
+
+select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000;
 }
 
 button {
+    color: white;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 10rem;
+    background: black;
+    border: 0;
+    font-size: 1.8rem;
+    font-weight: 200;
+}
 
-  width: 100%;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  text-transform: inherit;
-  align-items: center;
-
+p {
+    color: white;
 }

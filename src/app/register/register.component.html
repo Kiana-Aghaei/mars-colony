@@ -1,28 +1,17 @@
-<div class="registerPage">
+<div class="register-page">
+    <h1>Register</h1>
+    <form action="submit">
 
-<h1 class="heading">Register</h1>
+        <input type="text" name="name" id="name" placeholder="Name" [(ngModel)]="colonist.name" />
+        <input type="number" name="age" id="age" placeholder="Age" [(ngModel)]="colonist.age" />
 
-    <form class="register-page-form, container">
-      <!-- <fieldset class="from-field"> -->
-
-      <input type="text" name="name" id="name"  placeholder="name" [(ngModel)]="colonist.name">
-      <input type="number" name="age" id="age" placeholder="age"[(ngModel)]="colonist.age">
-
-        <select name="formDropdown">
-          <option value="Select occupation">Select occupation</option>
-          <option value="Dust farmer">Dust farmer</option>
-          <option value="Alien hunter">Alien hunter</option>
-          <option value="Battery technician">Battery technician</option>
-          <option value="Yoga teacher">Yoga teacher</option>
-          <option value="Front-end developer">Front-end developer</option>
+        <select [(ngModel)]="colonist.job_id" name="job_id">
+            <option [value]="NO_JOB_SELECTED">--Select occupation--</option>
+            <option *ngFor= "let job of marsJobs" [value]="job_id">{{job.name}}</option>
         </select>
-      <!-- </fieldset> -->
-      <fieldset class="button-field">
-          <button type="button" name="Check in">Check in</button>
-      </fieldset>
-      {{ colonist.name }}
-      {{ colonist.age }}
+        <button [disabled]="!jobSelected" type="">Check in</button>
     </form>
-
-
-  </div>
+    <p>
+        {{colonist.name}} - {{colonist.age}} - {{colonist.job_id}}
+    </p>
+</div>
