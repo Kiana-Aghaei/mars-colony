@@ -11,7 +11,7 @@ import { cantBe } from '../shared/validators';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css'],
+  styleUrls: ['./register.component.scss'],
   providers:[JobsService, ColonistsService]
 })
 export class RegisterComponent implements OnInit {

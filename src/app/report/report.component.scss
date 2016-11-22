@@ -50,11 +50,11 @@ button {
     font-size: 1.2rem;
     margin-top: 2rem;
     color:coral;
-    
     text-transform: uppercase;
-}
-button:hover {
+    text-align: center;
+&:hover {
     border: 1px solid white;
+    }
 }
 textarea {
     background: darkgray;
