@@ -1,31 +1,23 @@
-# MarsColony
+# Mars Colony 
 
-This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.19-3.
+## Summary
 
-## Development server
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+The Mars Colony App was created to be a Single Page Application (SPA) that could be used to register a new colonist on Mars. For this particular project we used Angular 2 and Typescript for the build, and SASS for the basic styling. 
 
-## Code scaffolding
+## Languages and Tools Used
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class`.
+	* Angular 2 JS/TS
+	* CSS/SASS
+	* API's
+	* Typescript
+	* Node JS
+	* Git/Github
+	* Postman
+	* Webpack
+  * HTML
+  
+	
 
-## Build
+## Learning Outcomes
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Deploying to Github Pages
-
-Run `ng github-pages:deploy` to deploy to Github Pages.
-
-## Further help
-
-To get more help on the `angular-cli` use `ng --help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+This project gave us the chance to delve into concepts of Angular 2 JS and apply them by building this SPA. By developing this project I was able to gain a strong foundation of understanding of the important Angular concepts such as:  components and modules, routing and navigation, classes and interfaces, and last but not least classes, interfaces and decorators that allow for form and API representation. 
