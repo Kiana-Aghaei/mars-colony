@@ -1,4 +1,6 @@
 # Mars Colony 
+![screen shot 2016-11-21 at 11 56 43 pm](https://cloud.githubusercontent.com/assets/21367775/20515471/b742bb02-b046-11e6-9b29-4063606828f1.png)
+
 
 ## Summary
 
