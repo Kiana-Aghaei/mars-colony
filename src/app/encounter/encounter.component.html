@@ -1,15 +1,15 @@
 <header>
   <h1>Recent Encounters</h1>
-  <p class = "sub-title">See an Alien? Report it!</p>
+  <p class="sub-title">See an Alien? Report it!</p>
 </header>
-  <ul class = "encounter-list">
-   <li *ngFor="let encounter of marsEncounters">
-     <p>{{encounter.date}} - {{encounter.atype}}</p>
-     <p>{{encounter.action}}</p>
-   </li>
-  </ul>
+<ul class="encounter-list">
+  <li *ngFor="let encounter of marsEncounters">
+    <p>{{encounter.date}} - {{encounter.atype}}</p>
+    <p>{{encounter.action}}</p>
+  </li>
+</ul>
 <footer>
   <h2>
-     <a routerLink="/Report" routerLinkActive="active">Report Encounter</a>
+    <a routerLink="/Report" routerLinkActive="active">Report Encounter</a>
   </h2>
 </footer>

@@ -1,22 +1,21 @@
+<section class="body">
+  <header>
+    <h1>Report Encounter</h1>
+    <p>Safety on Mars is your responsibility</p>
+  </header>
+  <form [formGroup]="reportForm" (ngSubmit)="onSubmit($event)">
+    <div class="custom-select">
+      <select name="alien-type" formControlName="atype">
+<option [value]="NO_ALIEN_SELECTED">Select an Alien</option> 
+<option *ngFor= "let alien of aliensList"[value]="alien.type">{{alien.type}}</option>
+</select>
+    </div>
 
-<section class ="body">
-<header>
-<h1>Report Encounter</h1>
-<p>Safety on Mars is your responsibility</p>
-</header>
-<form [formGroup]="reportForm" (ngSubmit)="onSubmit($event)">
-  	  <div class = "custom-select">
-	  	<select name="alien-type" formControlName="atype">
-         <option [value]="NO_ALIEN_SELECTED">Select an Alien</option> 
-	  	   <option *ngFor= "let alien of aliensList"[value]="alien.type">{{alien.type}}</option>
-	  	</select>
-	  </div>
-
-<div class = "text-form">
-  <textarea placeholder ="Action taken" formControlName="action"></textarea>
-</div>
-  <div class = "report-button">
-   <button class="button">Submit Report </button>
-  </div>
-</form>
+    <div class="text-form">
+      <textarea placeholder="Action taken" formControlName="action"></textarea>
+    </div>
+    <div class="report-button">
+      <button class="button">Submit Report </button>
+    </div>
+  </form>
 </section>
