@@ -1,14 +1,15 @@
-<!-- <div class="ng-scope">
-  <h1>Recent Encounters <span>See an Alien? Report it!</span></h1>
-
-  <ul [(ngModel)]="colonist.job_id" name="job_id" class="encounter-list">
-
-<li *ngFor= "let encounter of marsEncounters" [value]="encounter_id">
-{{job.name}}
-
-</li>
+<header>
+  <h1>Recent Encounters</h1>
+  <p class = "sub-title">See an Alien? Report it!</p>
+</header>
+  <ul class = "encounter-list">
+   <li *ngFor="let encounter of marsEncounters">
+     <p>{{encounter.date}} - {{encounter.atype}}</p>
+     <p>{{encounter.action}}</p>
+   </li>
   </ul>
-  <footer>
-<div class="button" ng-click="$state.go( 'report')">Report Encounter</div>
-  </footer>
-</div> -->
+<footer>
+  <h2>
+     <a routerLink="/Report" routerLinkActive="active">Report Encounter</a>
+  </h2>
+</footer>

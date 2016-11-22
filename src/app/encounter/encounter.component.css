@@ -1,0 +1,48 @@
+header {
+    height: 20vh;
+    text-align: center;
+    background:black;
+}
+h1 {
+    font-size:3rem;
+    color:#ffff4d;
+
+}
+h2 {
+    text-align: center;
+    padding-top: 5rem;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+}
+.sub-title {
+    font-size:1.5rem;
+    color:#f67f06;
+}
+a {
+    text-decoration: none;
+    color:#ffff4d;
+}
+ul {
+    overflow:auto;
+    padding-left:1.5rem;
+    background: darkgrey;
+}
+.encounter-list {
+    height: 400px;
+    overflow:auto;
+}
+footer {
+    background: black;
+    height:30vh;
+}
+
+.button {
+    margin: 0 auto;
+    font-size: 2.4rem;
+    text-align:center;
+    padding-top:2rem;
+    text-transform: uppercase;
+}
+li p {
+    color:black;
+}

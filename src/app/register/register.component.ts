@@ -1,56 +1,66 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, FormBuilder, Validators, AbstractControl } from '@angular/forms';
-import { NewColonist, Job } from '../models';
-import JobsService from '../services/jobs.service';
+import { FormGroup, FormControl, FormBuilder, Validators,ValidatorFn, AbstractControl } from '@angular/forms';
+import { Colonist, NewColonist, Job } from '../models';
+import  JobsService from '../services/jobs.service';
+import { Router } from '@angular/router';
+import ColonistsService from '../services/colonist.service'
+import { cantBe } from '../shared/validators';
 
 
-const notNone = (value) => {
-  return value === '(none)' ? false : true;
-}
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css'],
-  providers:[JobsService]
+  providers:[JobsService, ColonistsService]
 })
 export class RegisterComponent implements OnInit {
 
-  marsJobs: Job[];
-  registerForm: FormGroup;
+colonist: NewColonist;
+marsJobs: Job[];
+marsColonist: Colonist;
+registerForm: FormGroup;
 
-  NO_JOB_SELECTED = '(none)';
+NO_JOB_SELECTED = '(none)';
 
-  constructor(jobService: JobsService) {
+
+  constructor(jobService: JobsService,
+              private colonistsService: ColonistsService,
+              private router: Router,
+              ) {
+
 
     jobService.getJobs().subscribe((jobs) => {
-      this.marsJobs = jobs;
-
-    }, (err) => {
-      console.log(err);
+    this.marsJobs = jobs;
     });
-   }
+  }
+
 
   ngOnInit() {
-  this.registerForm = new FormGroup ({
-    name: new FormControl('', [Validators.required]),
+  this.registerForm = new FormGroup({
+    name: new FormControl('',[Validators.required]),
     age: new FormControl('', [Validators.required]),
-    job_id: new FormControl(this.NO_JOB_SELECTED, [Validators.required])
+    job_id: new FormControl('(none)', [cantBe(this.NO_JOB_SELECTED)])
   });
 }
- ngSubmit(event, registerForm){
-  event.proventDefault();
-  console.log('The Form is invalid', this.registerForm.invalid);
-  if(this.registerForm.invalid) {
 
-  } else {
+onSubmit(event) {
+  event.preventDefault();
     const name = this.registerForm.get('name').value;
     const age = this.registerForm.get('age').value;
     const job_id = this.registerForm.get('job_id').value;
-    console.log('ok, let\'s register this new colonist:', new NewColonust(name, age, job-id));
+    const colonist = new NewColonist(name, age, job_id);
+
+    if (this.registerForm.valid){
+      this.colonistsService.submitColonist(colonist).subscribe(
+        (colonist)=> {
+          localStorage.setItem('colonist_id', JSON.stringify(colonist.id));
+          this.router.navigate(['/Encounters']);
+          
+    }, (err)=> {
+      console.log(err);
+    });
 
   }
-}
-
-
+ }
 }

@@ -5,21 +5,17 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { RegisterComponent } from './register/register.component';
-import { EncounterComponent } from './encounter/encounter.component';
+import { EncountersComponent } from './encounter/encounter.component';
 import { ReportComponent } from './report/report.component';
+import { NotFoundComponent } from './notfound/notfound.component';
 import { RouterModule, Routes } from '@angular/router';
-import { NotfoundComponent } from './notfound/notfound.component';
-
-
 
 const appRoutes: Routes = [
-  { path: 'welcome', component: WelcomeComponent },
-
-  { path: 'register', component: RegisterComponent },
-  { path: 'encounter', component: EncounterComponent },
-  { path: 'report', component: ReportComponent },
-
-  { path: '**', component: NotfoundComponent }
+  { path: '', component: WelcomeComponent },
+  { path: 'Register', component: RegisterComponent },
+  { path: 'Encounters', component: EncountersComponent },
+  { path: 'Report', component: ReportComponent },
+  { path: '**', component: NotFoundComponent }
 ];
 
 
@@ -28,14 +24,14 @@ const appRoutes: Routes = [
     AppComponent,
     WelcomeComponent,
     RegisterComponent,
-    EncounterComponent,
+    EncountersComponent,
     ReportComponent,
-    NotfoundComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
-    HttpModule,
+    HttpModule, 
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],
